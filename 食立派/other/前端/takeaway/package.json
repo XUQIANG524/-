@@ -1,0 +1,41 @@
+{
+  "name": "takeaway",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@fawmi/vue-google-maps": "^0.9.79",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "axios": "^1.7.9",
+    "echarts": "^5.5.1",
+    "element-plus": "^2.9.2",
+    "leaflet": "^1.9.4",
+    "leaflet-routing-machine": "^3.2.12",
+    "qs": "^6.13.1",
+    "toast": "^0.5.4",
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5",
+    "vue-toastification": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitest/eslint-plugin": "1.1.10",
+    "@vue/test-utils": "^2.4.6",
+    "eslint": "^9.14.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "jsdom": "^25.0.1",
+    "less": "^4.2.1",
+    "vite": "^6.0.7",
+    "vite-plugin-vue-devtools": "^7.6.5",
+    "vitest": "^2.1.5"
+  }
+}

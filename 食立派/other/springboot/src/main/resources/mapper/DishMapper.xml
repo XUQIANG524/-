@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iedu.demo.springboot.mapper.DishMapper">
+
+    <insert id="insertDish" parameterType="com.iedu.demo.springboot.entity.Dish">
+        INSERT INTO dish (dish_name, price, image, flavour, state, merchant_id, description)
+        VALUES (#{dishName}, #{price}, #{image}, #{flavour}, #{state}, #{merchantId}, description)
+    </insert>
+
+    <update id="updateDish" parameterType="com.iedu.demo.springboot.entity.Dish">
+        UPDATE dish
+        <set>
+            <if test="dishName != null">
+                dish_name = #{dishName},
+            </if>
+            <if test="price != null">
+                price = #{price},
+            </if>
+            <if test="image != null">
+                image = #{image},
+            </if>
+            <if test="flavour != null">
+                flavour = #{flavour},
+            </if>
+            <if test="state != null">
+                state = #{state},
+            </if>
+            <if test="description != null">
+                description = #{description},
+            </if>
+        </set>
+        WHERE dish_id = #{dishId}
+    </update>
+
+</mapper>

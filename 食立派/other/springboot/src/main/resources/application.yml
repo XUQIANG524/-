@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: springboot
+  datasource:
+    url: jdbc:mysql://rm-2zebs25993b36zr7p6o.mysql.rds.aliyuncs.com:3306/team10?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: team10
+    password: 13191313866qeqQ
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: 106.3.99.64
+      port: 20022
+      password: 91ieduroot
+      database: 14
+      timeout: 3000
+  servlet:
+    multipart:
+      max-file-size: 2MB
+server:
+  port: 8088
+
+sa-token:
+  token-name: tjpu22s10
+  timeout: 259200
+  active-timeout: -1
+  is-log: true
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  # 添加这一行
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+upload:
+  minio:
+    endpoint: 106.3.99.64
+    port: 20028
+    accessKey: tjpu22s06
+    secretKey: tjpu22s06
+    bucketName: tjpu22s06
+    secure: false
+    expire: 3600

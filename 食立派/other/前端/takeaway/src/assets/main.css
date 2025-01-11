@@ -1,0 +1,17 @@
+@import './base.css';
+
+
+a > .el-menu-item {
+    text-decoration: none; /* 去除下划线或横杠 */
+    font-weight: bold; /* 加粗 */
+}
+
+a {
+    text-decoration: none; /* 全局去除 <a> 默认下划线 */
+    color: inherit; /* 确保文字颜色继承父级 */
+}
+
+/* 鼠标悬浮时保持样式一致 */
+a:hover {
+    text-decoration: none;
+}

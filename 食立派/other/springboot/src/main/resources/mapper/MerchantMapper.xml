@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iedu.demo.springboot.mapper.MerchantMapper">
+
+    <update id="updateMerchantInfo">
+        UPDATE merchant
+        <set>
+            <if test="merchantName != null and merchantName != ''">
+                merchant_name = #{merchantName},
+            </if>
+            <if test="idNum != null and idNum != ''">
+                id_num = #{idNum},
+            </if>
+            <if test="shopName != null and shopName != ''">
+                shop_name = #{shopName},
+            </if>
+            <if test="cityId != null">
+                city_id = #{cityId},
+            </if>
+            <if test="address != null and address != ''">
+                address = #{address},
+            </if>
+            <if test="image != null and image != ''">
+                image = #{image},
+            </if>
+            <if test="certification != null">
+                certification = #{certification},
+            </if>
+            <if test="rating != null">
+                rating = #{rating},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="phone != null and phone != ''">
+                phone = #{phone},
+            </if>
+            <if test="time != null and time != ''">
+                time = #{time},
+            </if>
+        </set>
+        WHERE merchant_id = #{merchantId}
+    </update>
+
+
+    <update id="updateMerchantCertification">
+        UPDATE merchant
+        SET certification = #{certification}
+        WHERE merchant_id = #{merchantId}
+    </update>
+
+</mapper>
